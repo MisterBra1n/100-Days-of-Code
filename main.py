@@ -2,7 +2,6 @@ import discord
 from discord.ext import commands, tasks
 import os
 
-discord_token = 'MTA1NjgxMTA0NTAyMjMzOTA5Mg.GYxhX9.5wsvMX_B-wsGs9vRgk7FBsswnARJDpoerpkqu0'
 
 bot = commands.Bot(command_prefix='!')
 
