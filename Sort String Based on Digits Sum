@@ -1,0 +1,48 @@
+import java.util.Arrays;
+
+public class Test {
+    public static void main(String[] args){
+        orderWeight("56 65 74 100 99 68 86 180 90");
+    }
+
+    public static String orderWeight(String strng) {    
+        String[] stringArray = strng.split(" ");
+
+        int[] numArray = new int[stringArray.length];
+
+        for (int i = 0; i < stringArray.length; i++) {numArray[i] = Integer.parseInt(stringArray[i]);}
+        
+        int[] sums = new int[numArray.length];
+
+        for (int i = 0; i < numArray.length; i++){
+            int number = numArray[i];
+            int sum = 0;
+            String string_number = Integer.toString(number);
+ 
+            for (int j = 0; j < string_number.length(); j++) {
+                int a = string_number.charAt(j) - '0';
+                sum += a;
+            }
+            sums[i] = sum;
+        }
+
+        //testing summed array
+        Arrays.sort(sums);
+        for (int i = 0; i < sums.length; i++){
+            System.out.println(sums[i]);
+        }
+
+        return "";
+      
+	}
+}
+
+class Pair implements Comparable{
+    public int compareTo(){
+        return 0;
+    }
+}
+
+interface Comparable<T>{
+    
+}
